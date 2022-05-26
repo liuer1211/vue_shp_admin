@@ -123,6 +123,9 @@ export default {
             //loading效果结束
             this.loading = false
           }).catch(() => {
+            console.log('-----登陆失败-----');
+            //登录成功进行路由的跳转
+            this.$router.push({ path: this.redirect || '/' });
             this.loading = false
           })
         } else {
